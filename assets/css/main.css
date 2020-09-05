@@ -1,16 +1,14 @@
 body {
-    background-image: url(../images/Pikachuwallpaper.jpg);
+    background-image: url(../images/pika.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: right;
     width: 100%;
 }
 
 form {
-    width: 20%;
-    margin-left: auto;
-    margin-right: 250px;
-    margin-top: 370px;
+    width: 30%;
+    margin-left: 180px;
+    margin-top: 500px;
 }
 
 .form-title {
@@ -22,3 +20,6 @@ form {
     color: black;
 }
 
+.resultado {
+   
+}
