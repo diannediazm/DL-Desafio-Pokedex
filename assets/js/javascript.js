@@ -10,6 +10,7 @@ formulario.on("submit", function (event) {
         pokenumero = parseInt($("#pokenumero").val());
         console.log(pokenumero);
         consulta(pokenumero);
+        $("body").css("background-image", "url(assets/images/fondo.png)"); 
 });
 
 function consulta(pokenumero) {
@@ -22,8 +23,11 @@ function consulta(pokenumero) {
                 console.log(response);
                 $("#resultado").html(`
                 <div class="text-center">
-                    <h3>Nombre: ${response.name}</h3>
+                    <h3>Pokémon: ${response.name}</h3>
                     <img src="${response.sprites.front_default}" alt="${response.name}">
+                    <h5>Altura: ${response.height}</h5>
+                    <h5>Peso: ${response.weight}</h5>
+                    <h5>Experiencia: ${response.base_experience}</h5>
                 </div>
             `);
             let resultado = `
@@ -47,6 +51,7 @@ function consulta(pokenumero) {
                     </tr>
                 `;
             });
+
             resultado += `
                 </tbody>
                 </table>
@@ -66,9 +71,7 @@ function consulta(pokenumero) {
             });
 
             var options = {
-                title: {
-                    text: "Grafica de columnas con jQuery y CanvasJS"              
-                },
+               
                 data: [              
                     {
                         type: "column",
