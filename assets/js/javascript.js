@@ -11,6 +11,7 @@ formulario.on("submit", function (event) {
         console.log(pokenumero);
         consulta(pokenumero);
         $("body").css("background-image", "url(assets/images/fondo.png)"); 
+        $(".formulario").css({marginLeft : "520px", marginTop: "500px", marginBottom: "50px"});
 });
 
 function consulta(pokenumero) {
