@@ -19,7 +19,7 @@ function consulta(pokenumero) {
         $.ajax ({
             datatype: "json",
             type: "get",
-            url: "https://pokeapi.co/api/v2/pokemon/1" + pokenumero,
+            url: "https://pokeapi.co/api/v2/pokemon/"+pokenumero,
             success: function (response) {
                 console.log(response);
                 $("#resultado").html(`
